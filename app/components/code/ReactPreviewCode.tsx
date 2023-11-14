@@ -21,7 +21,7 @@ const ReactPreviewCode = (props: Props) => {
       type="email"
       name="email"
       id="email"
-      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ribg-pink-600 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
       placeholder="name@company.com"
       required
     />
@@ -38,7 +38,7 @@ const ReactPreviewCode = (props: Props) => {
       name="password"
       id="password"
       placeholder="••••••••"
-      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ribg-pink-600 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
       required
     />
   </div>
@@ -49,7 +49,7 @@ const ReactPreviewCode = (props: Props) => {
           id="remember"
           type="checkbox"
           value=""
-          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ribg-pink-600 dark:bg-gray-700 dark:border-gray-600 dark:focus:ribg-pink-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
           required
         />
       </div>
@@ -69,7 +69,7 @@ const ReactPreviewCode = (props: Props) => {
   </div>
   <button
     type="submit"
-    className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    className="w-full text-white bg-pink-600 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-pink-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-pink-600 dark:hover:bg-pink-600 dark:focus:ribg-pink-600"
   >
     Login to your account
   </button>

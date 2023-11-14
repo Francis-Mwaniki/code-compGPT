@@ -19,7 +19,7 @@ export default function Home() {
   const htmlCode = HtmlCode;
   const vueCode = VueCode
   return (
-    <>
+    <div className="bg-gradient-to-b from-black via-gray-900 to-black">
     <h2 className="bg-gradient-to-b from-yellow-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent tracking-tight uppercase font-extrabold text-center my-11 sm:text-5xl text-3xl">Code Comp GPT Helper</h2>
     <div className="sm:max-w-6xl max-w-full  mx-auto m-4" suppressHydrationWarning>
       <div className=" overflow-hidden w-full">
@@ -132,7 +132,7 @@ export default function Home() {
       </div>
     </div>
     </div>
-    </>
+    </div>
     
   );
 }
