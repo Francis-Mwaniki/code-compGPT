@@ -19,15 +19,17 @@ export default function Home() {
   const htmlCode = HtmlCode;
   const vueCode = VueCode
   return (
-    <div className="max-w-6xl  mx-auto m-4" suppressHydrationWarning>
+    <div className="sm:max-w-6xl max-w-full  mx-auto m-4" suppressHydrationWarning>
+      <div className=" overflow-hidden w-full">
+      <div className=" overflow-x-auto sm:max-w-6xl max-w-full">
       {/* Header */}
-      <div className="bg-slate-900 flex justify-between items-center text-slate-50 px-8 py-5 rounded-lg mb-6">
+      <div className=" flex justify-between   items-center text-slate-50 px-11 py-5 rounded-lg mb-6 mx-3 ">
         {/* Left */}
-        <div className="flex items-center space-x-3">
-          <p className="bg-purple-600 px-4 py-2 rounded-md text-xl uppercase">
+        <div className="flex items-center space-x-3 justify-center gap-1">
+          <button className="bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
             Free
-          </p>
-          <p className="text-xl">Card with form inputs</p>
+          </button>
+          
         </div>
         {/* right */}
         <div className="flex items-center space-x-3">
@@ -87,6 +89,7 @@ export default function Home() {
           )}
         </div>
       </div>
+    </div>
       {/* code block */}
       <div className="rounded-lg px-8 py-5 bg-slate-900 text-slate-50 flex items-center justify-center">
         {currentDisplay === "preview" ? (
@@ -125,6 +128,7 @@ export default function Home() {
           </SyntaxHighlighter>
         )}
       </div>
+    </div>
     </div>
   );
 }
