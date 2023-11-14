@@ -19,6 +19,8 @@ export default function Home() {
   const htmlCode = HtmlCode;
   const vueCode = VueCode
   return (
+    <>
+    <h2 className="bg-gradient-to-b from-yellow-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent tracking-tight uppercase font-extrabold text-center my-11 sm:text-5xl text-3xl">Code Comp GPT Helper</h2>
     <div className="sm:max-w-6xl max-w-full  mx-auto m-4" suppressHydrationWarning>
       <div className=" overflow-hidden w-full">
       <div className=" overflow-x-auto sm:max-w-6xl max-w-full">
@@ -26,7 +28,7 @@ export default function Home() {
       <div className=" flex justify-between   items-center text-slate-50 px-11 py-5 rounded-lg mb-6 mx-3 ">
         {/* Left */}
         <div className="flex items-center space-x-3 justify-center gap-1">
-          <button className="bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
+          <button className="bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
             Free
           </button>
           
@@ -37,8 +39,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("preview")}
             className={
               currentDisplay === "preview"
-                ? "bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-slate-700 rounded-sm "
+                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
             <Eye className="w-5 h-5" />
@@ -48,8 +50,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("html")}
             className={
               currentDisplay === "html"
-                ? "bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-slate-700 rounded-sm "
+                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
             <Code className="w-5 h-5" />
@@ -59,8 +61,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("react")}
             className={
               currentDisplay === "react"
-                ? "bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-slate-700 rounded-sm "
+                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
             <Code className="w-5 h-5" />
@@ -70,8 +72,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("vue")}
             className={
               currentDisplay === "vue"
-                ? "bg-purple-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-slate-700 rounded-sm "
+                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
             <Code className="w-5 h-5" />
@@ -82,7 +84,7 @@ export default function Home() {
               text={currentDisplay === "html" ? htmlCode : reactCode}
               onCopy={() => toast.success("Copied to clipboard")}
             >
-              <button className="px-4 py-2 flex items-center space-x-2 bg-slate-700 rounded-sm ">
+              <button className="px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm ">
                 <Copy className="w-5 h-5" />
               </button>
             </CopyToClipboard>
@@ -91,7 +93,7 @@ export default function Home() {
       </div>
     </div>
       {/* code block */}
-      <div className="rounded-lg px-8 py-5 bg-slate-900 text-slate-50 flex items-center justify-center">
+      <div className="rounded-lg space-x-3 px-8 py-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-slate-50 flex items-center justify-center">
         {currentDisplay === "preview" ? (
          <ReactPreviewCode />
         ) : currentDisplay === "react" ? (
@@ -130,5 +132,7 @@ export default function Home() {
       </div>
     </div>
     </div>
+    </>
+    
   );
 }
