@@ -1,24 +1,36 @@
 import Link from "next/link";
 import Typing from "./Typing";
+import Image from "next/image";
 export default function Hero() {
   const introduction = `Welcome to Desishub Coding School! \n If you want to improve your coding skills, \n
   enroll in our courses today and embark on \n
   a journey of learning and growth.`;
   return (
+    <div className="rounded-lg px-5 select-none   ">
+        <div className="relative ">
+        <Image
+          src="grid.svg"
+          alt="background"
+          width={1572}
+          height={1572}
+          className="absolute  -top-1 -z-9 text-transparent"
+          
+        />
+      </div>
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 items-start">
       <div className=" p-2 pb-20 md:pb-10 flex flex-col justify-center items-start lg:pt-10 xl:max-w-xl">
         <h1 className="text-[1.8rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 md:leading-10">
           <span className="text-green-400">Learning</span> to{" "}
-          <span className="text-pink-500">Code</span> has never been easier
+          <span className="text-pink-500">Code</span> has never been easier.
         </h1>
-        <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl">
+        <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl pl-4">
           All the <strong className="text-white mx-1">skills</strong> that
             you need to become a{" "} <strong className="text-white mx-1">professional</strong> developer
         </p>
-        <div className="block lg:flex flex-wrap gap-3 mx-auto space-y-4 md:space-y-0">
+        <div className="flex flex-row   gap-3 mx-auto sm:space-y-4 md:space-y-0">
           <Link
             href="#"
-            className="block text-white button-85 hover:bg-gradient-to-br focus:ring-4 focus:outline-none   font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2 animate-pulse"
+            className="  font-medium rounded-lg text-sm md:text-xl px-5 md:py-4 text-center flex button-85 justify-center items-center mr-2 mb-2"
           >
             Join Us Today
           </Link>
@@ -49,6 +61,7 @@ export default function Hero() {
           </code>
         </div>
       </div>
+    </div>
     </div>
   );
 }
