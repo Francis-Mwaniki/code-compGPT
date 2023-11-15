@@ -28,7 +28,7 @@ export default function Home() {
       <div className=" flex justify-between   items-center text-slate-50 px-11 py-5 rounded-lg mb-6 mx-3 ">
         {/* Left */}
         <div className="flex items-center space-x-3 justify-center gap-1">
-          <button className="bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
+          <button className="bg-pink-900 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
             Free
           </button>
           
@@ -39,7 +39,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("preview")}
             className={
               currentDisplay === "preview"
-                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
                 : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
@@ -50,7 +50,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("html")}
             className={
               currentDisplay === "html"
-                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
                 : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
@@ -61,7 +61,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("react")}
             className={
               currentDisplay === "react"
-                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
                 : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
@@ -72,7 +72,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("vue")}
             className={
               currentDisplay === "vue"
-                ? "bg-pink-600 px-4 py-2 flex items-center space-x-2 rounded-sm"
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
                 : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
             }
           >
@@ -81,7 +81,7 @@ export default function Home() {
           </button>
           {(currentDisplay == "html" || currentDisplay == "react" || currentDisplay == "vue") && (
             <CopyToClipboard
-              text={currentDisplay === "html" ? htmlCode : reactCode}
+              text={currentDisplay === "html" ? htmlCode : currentDisplay === "react" ? reactCode : vueCode}
               onCopy={() => toast.success("Copied to clipboard")}
             >
               <button className="px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm ">

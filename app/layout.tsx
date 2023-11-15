@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning className="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen p-5">
+      <body className={inter.className} >
         
         {children}</body>
       <Toaster position="bottom-center" reverseOrder={false} />
