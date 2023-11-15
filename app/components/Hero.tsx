@@ -11,7 +11,7 @@ export default function Hero() {
      
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 items-start">
       <div className=" p-2 pb-20 md:pb-10 flex flex-col justify-center items-start lg:pt-10 xl:max-w-xl">
-        <h1 className="text-[1.8rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 md:leading-10">
+        <h1 className="text-[1.8rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold bg-gradient-to-r from-blue-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent  leading-8 md:leading-10">
           <span className="text-pink-500">Learning</span> to{" "}
           <span className="text-pink-500">Code</span> has never been easier.
         </h1>
