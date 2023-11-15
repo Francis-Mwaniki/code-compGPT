@@ -15,7 +15,7 @@ export default function Hero() {
           <span className="text-pink-500">Learning</span> to{" "}
           <span className="text-pink-500">Code</span> has never been easier.
         </h1>
-        <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl sm:pl-0 pl-4">
+        <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl sm:pl-4">
           All the <strong className="text-white mx-1">skills</strong> that
             you need to become a{" "} <strong className="text-white mx-1">professional</strong> developer
         </p>
