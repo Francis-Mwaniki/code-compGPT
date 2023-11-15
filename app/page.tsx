@@ -39,7 +39,9 @@ export default function Home() {
   return (
     <div className="bg-transparent">
     <h2 className="bg-gradient-to-r from-blue-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent tracking-tight uppercase font-extrabold text-center my-11 sm:text-5xl text-3xl">
-       THE CODE  <span className="text-pink-600">PREVIEW™.</span> {/* append small tm  */} 
+       THE CODE  <span className="text-pink-600">
+         MASTERY
+        </span> {/* append small tm  */} 
       
       
     </h2>
@@ -55,7 +57,7 @@ export default function Home() {
           alt="background"
           width={1572}
           height={1572}
-          className="absolute  top-20 -z-10 text-transparent"
+          className="absolute  top-24 -z-10 text-transparent"
           
         />
       </div>
@@ -79,7 +81,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("preview")}
             className={
               currentDisplay === "preview"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
                 : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
             }
           >
@@ -90,7 +92,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("html")}
             className={
               currentDisplay === "html"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
                 : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
             }
           >
@@ -101,7 +103,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("react")}
             className={
               currentDisplay === "react"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
                 : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
             }
           >
@@ -112,7 +114,7 @@ export default function Home() {
             onClick={() => setCurrentDisplay("vue")}
             className={
               currentDisplay === "vue"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
                 : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
             }
           >

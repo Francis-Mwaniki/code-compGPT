@@ -6,21 +6,13 @@ export default function Hero() {
   enroll in our courses today and embark on \n
   a journey of learning and growth.`;
   return (
-    <div className="rounded-lg px-5 select-none   ">
-        <div className="relative ">
-        <Image
-          src="grid.svg"
-          alt="background"
-          width={1572}
-          height={1572}
-          className="absolute  -top-1 -z-9 text-transparent"
-          
-        />
-      </div>
+    <div className="rounded-lg px-5 select-none    shadow-none">
+       
+     
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 items-start">
       <div className=" p-2 pb-20 md:pb-10 flex flex-col justify-center items-start lg:pt-10 xl:max-w-xl">
         <h1 className="text-[1.8rem] sm:text-4xl lg:text-[3rem] md:font-extrabold lg:leading-[3.2rem] font-bold text-white leading-8 md:leading-10">
-          <span className="text-green-400">Learning</span> to{" "}
+          <span className="text-pink-500">Learning</span> to{" "}
           <span className="text-pink-500">Code</span> has never been easier.
         </h1>
         <p className="leading-relaxed text-gray-300 text-[1rem] sm:text-lg my-5 md:my-7 md:text-xl pl-4">
