@@ -5,6 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import {ReactCode} from "./components/code/react";
 import {HtmlCode} from "./components/code/html";
 import {VueCode} from "./components/code/vue"
+import Image from "next/image";
 import ReactPreviewCode from "./components/code/ReactPreviewCode";
 import {
   docco,
@@ -19,19 +20,37 @@ export default function Home() {
   const htmlCode = HtmlCode;
   const vueCode = VueCode
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black">
-    <h2 className="bg-gradient-to-b from-yellow-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent tracking-tight uppercase font-extrabold text-center my-11 sm:text-5xl text-3xl">Code Comp GPT Helper</h2>
+    <div className="bg-transparent">
+    <h2 className="bg-gradient-to-r from-blue-800 via-neutral-100 to-pink-600 bg-clip-text text-transparent tracking-tight uppercase font-extrabold text-center my-11 sm:text-5xl text-3xl">
+       THE CODE  <span className="text-pink-600">PREVIEW™.</span> {/* append small tm  */} 
+      
+      
+    </h2>
+  
     <div className="sm:max-w-6xl max-w-full  mx-auto m-4" suppressHydrationWarning>
+    <div className="relative bg-grid">
+        <Image
+          src="grid.svg"
+          alt="background"
+          width={1572}
+          height={795}
+          className="absolute  top-20 -z-10 text-transparent"
+          
+        />
+      </div>
+      
       <div className=" overflow-hidden w-full">
       <div className=" overflow-x-auto sm:max-w-6xl max-w-full">
+   
       {/* Header */}
+     
       <div className=" flex justify-between   items-center text-slate-50 px-11 py-5 rounded-lg mb-6 mx-3 ">
         {/* Left */}
         <div className="flex items-center space-x-3 justify-center gap-1">
-          <button className="bg-pink-900 px-4 py-2 flex items-center space-x-2 rounded-sm m-1">
+          {/* <button className="bg-pink-900 px-4 py-2 flex items-center space-x-2 rounded-lg m-1">
             Free
           </button>
-          
+           */}
         </div>
         {/* right */}
         <div className="flex items-center space-x-3">
@@ -39,8 +58,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("preview")}
             className={
               currentDisplay === "preview"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-lg "
             }
           >
             <Eye className="w-5 h-5" />
@@ -50,8 +69,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("html")}
             className={
               currentDisplay === "html"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -61,8 +80,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("react")}
             className={
               currentDisplay === "react"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -72,8 +91,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("vue")}
             className={
               currentDisplay === "vue"
-                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-sm"
-                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm "
+                ? "button-85 px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -84,7 +103,7 @@ export default function Home() {
               text={currentDisplay === "html" ? htmlCode : currentDisplay === "react" ? reactCode : vueCode}
               onCopy={() => toast.success("Copied to clipboard")}
             >
-              <button className="px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-sm ">
+              <button className="px-4 py-2 flex items-center space-x-2 bg-pink-900 rounded-lg ">
                 <Copy className="w-5 h-5" />
               </button>
             </CopyToClipboard>
@@ -93,7 +112,7 @@ export default function Home() {
       </div>
     </div>
       {/* code block */}
-      <div className="rounded-lg space-x-3 px-8 py-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-slate-50 flex items-center justify-center">
+      <div className="rounded-lg space-x-3 px-8 py-5  bg-transparent text-slate-50 flex items-center justify-center">
         {currentDisplay === "preview" ? (
          <ReactPreviewCode />
         ) : currentDisplay === "react" ? (
@@ -103,6 +122,19 @@ export default function Home() {
             customStyle={{ background: "transparent", flex: 1 }}
             showLineNumbers
             wrapLines
+            showInlineLineNumbers
+            codeTagProps={
+              {
+                style: {
+                  fontFamily: "monospace",
+                  fontSize: "1rem",
+                  lineHeight: "1.5",
+                  whiteSpace: "pre-wrap",
+                  wordBreak: "break-word",
+                  overflowWrap: "break-word",
+                },
+              } as any
+            }
           >
             {reactCode}
           </SyntaxHighlighter>
@@ -114,6 +146,20 @@ export default function Home() {
             customStyle={{ background: "transparent", flex: 1 }}
             showLineNumbers
             wrapLines
+            showInlineLineNumbers
+            codeTagProps={
+              {
+                style: {
+                  fontFamily: "monospace",
+                  fontSize: "1rem",
+                  lineHeight: "1.5",
+                  whiteSpace: "pre-wrap",
+                  wordBreak: "break-word",
+                  overflowWrap: "break-word",
+                },
+              } as any
+            }
+            
           >
             {vueCode}
           </SyntaxHighlighter>
@@ -125,6 +171,19 @@ export default function Home() {
             customStyle={{ background: "transparent", flex: 1 }}
             showLineNumbers
             wrapLines
+            showInlineLineNumbers
+            codeTagProps={
+              {
+                style: {
+                  fontFamily: "monospace",
+                  fontSize: "1rem",
+                  lineHeight: "1.5",
+                  whiteSpace: "pre-wrap",
+                  wordBreak: "break-word",
+                  overflowWrap: "break-word",
+                },
+              } as any
+            }
           >
             {htmlCode}
           </SyntaxHighlighter>

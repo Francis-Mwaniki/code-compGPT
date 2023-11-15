@@ -3,18 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-  @variants responsive {
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-  }
+}
+::selection {
+  color: #ec4899;
+  background: #020617; /* Change the background color as desired */
 }
 
 .bgBlack {
@@ -184,4 +177,40 @@
   background-size: cover;
   background-repeat: no-repeat;
   backface-visibility: visible;
+}
+
+
+
+/* Customizing scrollbar styles */
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background: #ec4899; /* Set the color of the scrollbar handle */
+  border-radius: 5px; /* Set the border radius of the scrollbar handle */
+}
+
+/* Handle on drag */
+::-webkit-scrollbar-thumb:hover {
+  background: #f53294; /* Change color on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #370e22; /* Set the color of the scrollbar track */
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: transparent; /* Set the color of the scrollbar corner */
+}
+
+/* styles.css */
+.bg-grid {
+  background-image: url('/grid.svg'); /* Path to your SVG file from the public directory */
+  background-size: cover; /* Adjust according to your design */
+  /* Additional background styling if needed */
 }
