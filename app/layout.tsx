@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className=" dark:bg-gradient-to-b from-black via-gray-900 to-black min-h-screen ">
+    <html lang="en" suppressHydrationWarning className=" bg-gradient-to-b from-black via-gray-900 to-black min-h-screen ">
     
       <body className={inter.className} >
         
