@@ -19,16 +19,14 @@ export default function Hero() {
           All the <strong className="text-white mx-1">skills</strong> that
             you need to become a{" "} <strong className="text-white mx-1">professional</strong> developer
         </p>
-        <div className="flex flex-row   gap-3 mx-auto sm:space-y-4 md:space-y-0">
+        <div className="flex justify-center items-center w-full max-w-sm  gap-3 mx-auto sm:space-y-4 md:space-y-0">
           <Link
             href="#"
-            className="  font-medium rounded-lg text-sm md:text-xl px-5 md:py-4 text-center flex button-85 justify-center items-center mr-2 mb-2"
+            className="  text-center flex button-85 justify-center items-center  justify-self-center w-full py-4"
           >
             Join Us Today
           </Link>
-          <button className="block  button-52 font-medium rounded-lg text-sm md:text-xl px-5 py-2.5 md:py-4 text-center mr-2 mb-2">
-            Learn More
-          </button>
+          
         </div>
       </div>
       {/* Card */}

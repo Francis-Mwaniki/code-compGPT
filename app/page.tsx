@@ -15,6 +15,8 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import toast from "react-hot-toast";
 import Hero from "./components/Hero";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 export default function Home() {
   const [currentDisplay, setCurrentDisplay] = useState("preview");
   const reactCode = ReactCode;
@@ -68,21 +70,15 @@ export default function Home() {
       {/* Header */}
      
       <div className=" flex justify-between   items-center text-slate-50 px-11 py-5 rounded-lg mb-6 mx-3 ">
-        {/* Left */}
-        <div className="flex items-center space-x-3 justify-center gap-1">
-          {/* <button className="button-62 px-4 py-2 flex items-center space-x-2 rounded-lg m-1">
-            Free
-          </button>
-           */}
-        </div>
+      
         {/* right */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 overflow-x-auto px-5 w-full min-w-max ">
           <button
             onClick={() => setCurrentDisplay("preview")}
             className={
               currentDisplay === "preview"
-                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
-                : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
+                ? " bg-pink-600  px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2  bg-pink-800 rounded-lg "
             }
           >
             <Eye className="w-5 h-5" />
@@ -92,8 +88,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("html")}
             className={
               currentDisplay === "html"
-                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
-                : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
+                ? " bg-pink-600  px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2  bg-pink-800 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -103,8 +99,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("react")}
             className={
               currentDisplay === "react"
-                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
-                : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
+                ? " bg-pink-600  px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2  bg-pink-800 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -114,8 +110,8 @@ export default function Home() {
             onClick={() => setCurrentDisplay("vue")}
             className={
               currentDisplay === "vue"
-                ? "button-001  px-4 py-2 flex items-center space-x-2 rounded-lg"
-                : "px-4 py-2 flex items-center space-x-2 button-62 rounded-lg "
+                ? " bg-pink-600  px-4 py-2 flex items-center space-x-2 rounded-lg"
+                : "px-4 py-2 flex items-center space-x-2  bg-pink-800 rounded-lg "
             }
           >
             <Code className="w-5 h-5" />
@@ -126,7 +122,7 @@ export default function Home() {
               text={currentDisplay === "html" ? htmlCode : currentDisplay === "react" ? reactCode : vueCode}
               onCopy={() => toast.success("Copied to clipboard")}
             >
-              <button className="px-4 py-2 flex items-center space-x-2 button-62 rounded-lg ">
+              <button className="px-4 py-2 flex items-center space-x-2  bg-pink-800 rounded-lg ">
                 <Copy className="w-5 h-5" />
               </button>
             </CopyToClipboard>
@@ -214,6 +210,10 @@ export default function Home() {
       </div>
     </div>
     </div>
+    <div className=" h-36" />
+      
+    <Banner />
+    <Footer />
     </div>
     
   );
