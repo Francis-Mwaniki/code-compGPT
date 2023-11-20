@@ -1,7 +1,7 @@
  import Image from "next/image";
 const Banner = () => {
     return (
-      <div className=" text-white p-24 rounded-lg text-center mt-32 ">
+      <div className=" text-white w-full sm:p-24 rounded-lg text-center sm:mt-32 ">
          <div className="relative">
         <Image
           src="grid.svg"
@@ -28,7 +28,9 @@ const Banner = () => {
         </p>
        </div>
         <div className="flex justify-center mt-8 items-center w-full max-w-md mx-auto">
-          <button className="button-85 m-2 flex justify-center justify-self-center w-full items-center py-4">Get Started</button>
+          <button className="button-85 m-2 flex justify-center justify-self-center w-full items-center py-4"  onClick={() => {
+        window.location.href = "/sign-in"
+      }}>Get Started</button>
          
           </div>
       </div>
