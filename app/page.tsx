@@ -48,6 +48,7 @@ export default function Home() {
       
     </h2>
     <div className=" mx-4">
+
        <Hero />
     </div>
     
@@ -210,7 +211,7 @@ export default function Home() {
       </div>
     </div>
     </div>
-    <div className=" h-36" />
+    <div className=" sm:h-36 px-4" />
       
     <Banner />
     <Footer />

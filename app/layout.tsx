@@ -4,7 +4,7 @@ import './globals.css'
 import { Toaster } from "react-hot-toast";
 import Image from 'next/image'
 const inter = Inter({ subsets: ['latin'] })
-
+import { ClerkProvider } from '@clerk/nextjs'
 export const metadata: Metadata = {
   title: 'code-preview™',
   description: 'The Code Preview is a tool that allows you to preview your code in real time.',
@@ -16,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning className=" bg-gradient-to-b from-black via-gray-900 to-black min-h-screen ">
     
       <body className={inter.className} >
@@ -23,5 +24,6 @@ export default function RootLayout({
         {children}</body>
       <Toaster position="bottom-center" reverseOrder={false} />
     </html>
+    </ClerkProvider>
   )
 }

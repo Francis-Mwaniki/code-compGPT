@@ -23,6 +23,9 @@ export default function Hero() {
           <Link
             href="#"
             className="  text-center flex button-85 justify-center items-center  justify-self-center w-full py-4"
+            onClick={() => {
+              window.location.href = "/sign-up"
+            }}
           >
             Join Us Today
           </Link>
